@@ -39,23 +39,22 @@ dsh-liya-archives/
 ## 自检与打包
 
 ```powershell
-node E:\DCIM\DSH-Liya\skills\dsh-plugin-dev\scripts\check-plugin.mjs E:\DCIM\DSH-Liya\workspace\dsh-plugins\dsh-liya-archives
-node E:\DCIM\DSH-Liya\skills\dsh-plugin-dev\scripts\pack-plugin.mjs E:\DCIM\DSH-Liya\workspace\dsh-plugins\dsh-liya-archives
-```
-
-测试（跑在这台机器 DSH profile 的真实依赖上）：
-
-```powershell
-$env:DSH_PROFILE_NODE_MODULES = "C:\Users\feverZHONG\.dsh\profiles\node_modules"
+# 冒烟测试（host + client，无外部依赖，用 DSH profile 的真实依赖跑）
+$env:DSH_PROFILE_NODE_MODULES = "<你的 DSH profile node_modules 路径>"
 node tests/host-test.mjs
 node tests/smoke-test.cjs
+
+# 打包（产物为可分发 tgz）
+pnpm pack
 ```
 
-## 安装到 DSH（阁下电脑）
+## 安装到 DSH
 
 ```powershell
-dsh plugin --profile web add E:\DCIM\DSH-Liya\workspace\dsh-plugins\dsh-liya-archives
+dsh plugin --profile web add <插件目录>
 ```
+
+> `dsh` 请替换为阁下 DSH 安装对应的 CLI 调用方式。
 
 装完**重启 WebUI**（client 半生效需要），侧边栏底部出现「已归档 (n)」；
 没有任何归档会话时按钮自动隐藏——先归档一个会话再验证。
