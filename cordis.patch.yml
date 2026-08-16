@@ -1,0 +1,6 @@
+# 归档会话抽屉（莉娅版）—— 挂载条目
+# 抄改自 chou109/dsh-archives（MIT，https://github.com/chou109/dsh-archives）
+# 被 dsh.profile.bundles 按加入顺序应用（在 @deepseek-ai/dsh-base 与 dsh-web-app 之后）
+- insert:
+    - id: dsh-liya-archives
+      name: dsh-liya-archives

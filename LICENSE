@@ -1,0 +1,32 @@
+MIT License
+
+Copyright (c) 2026 chou109 (dsh-archives 原作者)
+Copyright (c) 2026 fever钟 (dsh-liya-archives 莉娅版改造)
+
+本插件（dsh-liya-archives）抄改自 chou109 的 dsh-archives：
+- 原仓库：https://github.com/chou109/dsh-archives （Gitee 镜像：https://gitee.com/chill109/dsh-archives）
+- 原插件为 MIT 许可，本插件保留原作者版权声明，改造内容如下：
+  1. 包名改为 dsh-liya-archives（bundle id / 槽位 id / locale 命名空间同步）
+  2. host 路由改为 POST /liya-archives/unarchive（避免与社区原版共存时冲突）
+  3. 修复列表渲染缺少 key 的 React 警告
+  4. 中英文案与 UI 结构保持原版语义
+
+任何分发（含修改后分发）须保留本声明与上述两份版权声明。
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
