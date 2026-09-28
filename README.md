@@ -54,7 +54,7 @@ pnpm pack
 dsh plugin --profile web add <插件目录>
 ```
 
-> `dsh` 请替换为阁下 DSH 安装对应的 CLI 调用方式。
+> `dsh` 请替换为你自己 DSH 安装对应的 CLI 调用方式。
 
 装完**重启 WebUI**（client 半生效需要），侧边栏底部出现「已归档 (n)」；
 没有任何归档会话时按钮自动隐藏——先归档一个会话再验证。
