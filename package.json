@@ -1,19 +1,31 @@
 {
   "name": "dsh-liya-archives",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "归档会话抽屉（莉娅版）：侧边栏底部「已归档 (n)」入口，按工作区分组列出归档会话，点击一键恢复并打开 / 复制为新会话 / 仅移回侧边栏。抄改自 chou109/dsh-archives（MIT，https://github.com/chou109/dsh-archives）。",
   "type": "module",
   "main": "index.js",
   "exports": {
-    ".": { "default": "./index.js" },
-    "./client": { "default": "./client.js" },
+    ".": {
+      "default": "./index.js"
+    },
+    "./client": {
+      "default": "./client.js"
+    },
     "./cordis.patch.yml": "./cordis.patch.yml",
     "./package.json": "./package.json"
   },
-  "files": ["index.js", "client.js", "cordis.patch.yml", "README.md", "LICENSE"],
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
   "license": "MIT",
   "dsh": {
-    "bundle": { "patch": "./cordis.patch.yml" },
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
     "client": {
       "inject": [
         "@deepseek-ai/dsh-client-ui-slots",
@@ -24,8 +36,8 @@
   },
   "peerDependencies": {
     "@deepseek-ai/cordis": "^4.0.1",
-    "@deepseek-ai/dsh-host-webserver": "0.1.0-rc.5",
-    "@deepseek-ai/dsh-client-ui-slots": "0.1.0-rc.5",
-    "@deepseek-ai/dsh-client-runtime": "0.1.0-rc.5"
+    "@deepseek-ai/dsh-host-webserver": "0.2.0-rc.2",
+    "@deepseek-ai/dsh-client-ui-slots": "0.2.0-rc.2",
+    "@deepseek-ai/dsh-client-runtime": "0.2.0-rc.2"
   }
 }

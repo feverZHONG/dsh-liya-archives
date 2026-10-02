@@ -433,9 +433,8 @@ window.__ModuleLoader__.load({
 		var inject = ["slots", "sessions", "workspaces", "locale"];
 
 		/**
-		 * 设置 → 插件 只读信息卡（settings.plugin.item）：
-		 * 让第三方插件在「插件配置」页可见（官方只写死三张卡，第三方要自带卡片）。
-		 * 照 dsh-liya-ui / dsh-liya-skin 的卡模式。
+		 * 设置 → 插件 只读信息卡（旧 rc.5 的 settings.plugin.item，rc.2 已移除该插槽）：
+		 * 组件保留在文件里但不再注册——rc.2 的插件可见性由官方「设置 → 插件」页承担。
 		 */
 		function ArchivesInfoCard() {
 			var openState = react.useState(false);
@@ -558,18 +557,9 @@ window.__ModuleLoader__.load({
 					}
 				}, ArchivedSessionsPanel);
 			});
-			// 设置 → 插件 信息卡（只读，第三方插件可见性）
-			ctx.slots.inject("settings.plugin.item", function () {
-				return ctx.slots.register(
-					{
-						name: "settings.plugin.item",
-						id: "dsh-liya-archives",
-						order: 30,
-						label: function () { return "dsh-liya-archives"; }
-					},
-					function () { return react.createElement(ArchivesInfoCard, {}); }
-				);
-			});
+			// rc.2：`settings.plugin.item` 插槽已被官方移除（SlotMap 里没有这个 key），
+			// 注册它会抛错并连累整个 client 条目激活 → 不再注册信息卡；
+			// 插件可见性改由官方「设置 → 插件」页承担。ArchivesInfoCard 组件保留（未注册）。
 		}
 		//#endregion
 
